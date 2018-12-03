@@ -8,10 +8,12 @@
 }
 .container-bg-2 {
     background: #242424;
-    padding: 10px 20px 10px 20px;
+    padding: 20px 20px 10px 20px;
 }
 .container-bg h2 {
     color: #fff;
+    font-size: 40px;
+    font-weight: 300;
 }
 .container-bg-2 p {
     color: #fff;
@@ -19,6 +21,13 @@
 .about {
     background-color: dodgerblue;
     padding: 60px 20px 60px 20px;
+}
+.skills {
+    background-color: #f2f2f2;
+    padding: 30px 20px 60px 20px;
+}
+.skills p {
+    color: #242424 !important;
 }
 .about h2, p {
     color: #fff !important;
@@ -36,7 +45,7 @@ ul {
     position: relative;
 }
 ul li {
-    padding: 20px;
+    padding: 30px;
 }
 #first {
     background: dodgerblue;
@@ -53,4 +62,23 @@ ul li {
 #four {
     background: indianred;
     color: #fff;
+}
+#first, #second, #third, #four {
+    width: 100%;
+}
+.footer {
+    background-color: #242424;
+    padding: 50px 50px;
+}
+.mybtn {
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+}
+.icon, .icon-2, .icon-3, .icon-4 {
+    font-weight: 600;
+    font-size: 12px;
+}
+.progress-bar {
+    background-color: green !important;
 }

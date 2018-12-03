@@ -16,9 +16,41 @@
 .container-bg-2 p {
     color: #fff;
 }
+.about {
+    background-color: dodgerblue;
+    padding: 60px 20px 60px 20px;
+}
+.about h2, p {
+    color: #fff !important;
+}
 h1, h2, h3, p {
     color: #242424;
 }
 ul {
     list-style: none;
+    margin-bottom: 0 !important;
+}
+.menu {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+ul li {
+    padding: 20px;
+}
+#first {
+    background: dodgerblue;
+    color: #fff;
+}
+#second {
+    background: green;
+    color: #fff;
+}
+#third {
+    background: #e4e400;
+    color: #fff;
+}
+#four {
+    background: indianred;
+    color: #fff;
 }

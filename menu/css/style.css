@@ -1,23 +1,83 @@
 table {
     width: 100%;
 }
+tbody {
+    display: block;
+    padding: 20px;
+}
+header {
+    background: #ececec;
+    padding: 15px 20px;
+}
+h2 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+tr {
+    display: flex;
+    justify-content: space-between;
+}
+hr {
+    border: 1px solid #ececec;
+    width: 100%;
+    margin: 0;
+}
+#flex {
+    display: flex;
+    justify-content: space-between;
+}
 .container {
     padding-top: 50px;
     padding-bottom: 50px;
 }
 .menu {
+    position: relative;
     border: 3px solid #ececec;
-    padding: 20px;
+    border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 30px;
 }
 .main-menu-title h2 {
     font-size: 25px;
+    line-height: 30px;
     font-weight: 600;
     text-transform: none;
     color: #242424;
 }
-h2 {
-    margin-top: 0;
-    margin-bottom: 0;
+.menu-name {
+    font-size: 20px;
+    line-height: 30px;
+}
+.menu-keywords {
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #00c111;
+    border-bottom: 2px solid #f7f7f7;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.price {
+    font-size: 25px;
+    color: #0fbf28;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-left: 2px solid #ececec;
+}
+i.fas.fa-utensils {
+    font-size: 25px;
+    color: #d44848;
+}
+i.fas.fa-utensil-spoon {
+    font-size: 25px;
+    color: #f1be22;
+}
+i.fas.fa-cookie-bite {
+    font-size: 25px;
+    color: #bb6b00;
+}
+i.fas.fa-coffee {
+    font-size: 25px;
+    color: #ffb860;
 }

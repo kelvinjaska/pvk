@@ -8,4 +8,6 @@ table {
 .menu {
     border: 3px solid #ececec;
     padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="fa13fa53-685e-4004-856b-480b2b319bd8" name="Web-Development" url="http://kelvinjaska.ikt.khk.ee">
+        <fileTransfer host="kelvinjaska.ikt.khk.ee" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="53e14ba3-0e69-43d1-bfee-c4bb92306ab1" name="kool" url="http://kelvinjaska.ikt.khk.ee">
+        <fileTransfer host="kelvinjaska.ikt.khk.ee" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -48,22 +48,28 @@ hr {
 .menu-name {
     font-size: 20px;
     line-height: 30px;
+    color: #36b1dc;
 }
 .menu-keywords {
     font-size: 13px;
     line-height: 20px;
-    font-weight: 400;
-    color: #00c111;
+    font-weight: 500;
+    color: #969696;
     border-bottom: 2px solid #f7f7f7;
     margin-bottom: 10px;
     width: 100%;
 }
 .price {
     font-size: 25px;
-    color: #3eb3da;
+    color: #333;
     font-weight: 600;
     padding: 5px 10px;
-    border-left: 2px solid #ececec;
+}
+.price-discount {
+    font-size: 18px;
+    color: #09c91c;
+    font-weight: 600;
+    padding: 5px 10px;
 }
 i.fas.fa-utensils {
     font-size: 25px;

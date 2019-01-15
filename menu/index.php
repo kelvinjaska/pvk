@@ -1,6 +1,6 @@
 <?php
 function soodus($hind, $soodusProtsent) {
-    return $hind * ((100 - $soodusProtsent) / 100);
+    return round(  $hind * ((100 - $soodusProtsent) / 100),2);
 }
 ?>
 <!DOCTYPE html>
@@ -29,7 +29,7 @@ function soodus($hind, $soodusProtsent) {
                     </header>
                     <?php
                     $praed = array(
-                        array(
+                         array(
                         'tuup' => "praed",
                         'nimetus' => 'Sealihapada ploomide ja aprikoosiga',
                         'kirjeldus' => 'sealiha, lisand, salat, leib',
@@ -40,7 +40,7 @@ function soodus($hind, $soodusProtsent) {
                         'tuup' => "praed",
                         'nimetus' => 'Praetud kanakints',
                         'kirjeldus' => 'praetud kana, lisand, salat, leib',
-                        'hind' => 2.50
+                        'hind' => 2.55
                         ),
                               
                         array(
@@ -61,7 +61,7 @@ function soodus($hind, $soodusProtsent) {
                         'tuup' => "praed",
                         'nimetus' => 'Hakklihakaste 1/2',
                         'kirjeldus' => 'hakklihakaste, lisand, salat, leib',
-                        'hind' => 1.30
+                        'hind' => 1.35
                         )
                         
                     );
@@ -71,6 +71,7 @@ function soodus($hind, $soodusProtsent) {
                         <td ><span class="price" >' .$info['hind']. '€</span ></td >
                     <tr >
                         <th class="menu-keywords" >' .$info['kirjeldus']. '</th >
+                        <td class="price-discount" >'.soodus($info['hind'], 15).'€</td>
                     </tr >
                     </tr >';
                     }
@@ -79,7 +80,6 @@ function soodus($hind, $soodusProtsent) {
                 </table>
             </div>
 
-
             <div class="menu">
                 <table>
                     <header id="flex">
@@ -87,24 +87,37 @@ function soodus($hind, $soodusProtsent) {
                         <i class="fas fa-utensil-spoon"></i>
                     </header>
 
-                    <tr id="6">
-                        <th class="menu-name">Borsch</th>
-                        <td><span class="price">2,25€</span></td>
-                    <tr>
-                        <th class="menu-keywords">supp, happukoor, leib</th>
-                    </tr>
-                    </tr>
+                    <?php
+                    $supid = array(
+                        array(
+                            'tuup' => "supid",
+                            'nimetus' => 'Borsch',
+                            'kirjeldus' => 'supp, happukoor, leib',
+                            'hind' => 2.25
+                        ),
+                        array(
+                            'tuup' => "supid",
+                            'nimetus' => 'Seljanka',
+                            'kirjeldus' => 'supp, happukoor, leib',
+                            'hind' => 2.45
+                        )
+                    );
 
-                    <tr id="7">
-                        <th class="menu-name">Seljanka</th>
-                        <td><span class="price">2,40€</span></td>
-                    <tr>
-                        <th class="menu-keywords">supp, happukoor, leib</th>
-                    </tr>
-                    </tr>
+                    foreach($supid as $sup=>$info) {
+                    echo '<tr id = "1" >
+                        <th class="menu-name" >' .$info['nimetus']. '</th >
+                        <td ><span class="price" >' .$info['hind']. '€</span ></td >
+                    <tr >
+                        <th class="menu-keywords" >' .$info['kirjeldus']. '</th >
+                        <td class="price-discount" >' .soodus($info['hind'], 15).'€</td>
+
+                    </tr >
+                    </tr >';
+                    }
+                    ?>
                 </table>
             </div>
-        </div>
+        </div> <!-- Left side -->
         <div class="col-sm-6">
             <div class="menu">
                 <table>
@@ -112,14 +125,28 @@ function soodus($hind, $soodusProtsent) {
                         <h2><div class="main-menu-title text-left">Magustoidud</div></h2>
                         <i class="fas fa-cookie-bite"></i>
                     </header>
+                    <?php
+                    $magustoidud = array(
+                        array(
+                            'tuup' => "magustoidud",
+                            'nimetus' => 'Kihiline piparkoogi-kohupiimamaius',
+                            'kirjeldus' => 'piparkook, kohupiim',
+                            'hind' => 1.75
+                        )
+                    );
 
-                    <tr id="9">
-                        <th class="menu-name">Kihiline piparkoogi-kohupiimamaius</th>
-                        <td><span class="price">1,75€</span></td>
-                    <tr>
-                        <th class="menu-keywords">piparkook, kohupiim</th>
-                    </tr>
-                    </tr>
+                    foreach($magustoidud as $magustoit=>$info) {
+                        echo '<tr id = "1" >
+                        <th class="menu-name" >' .$info['nimetus']. '</th >
+                        <td ><span class="price" >' .$info['hind']. '€</span ></td >
+                    <tr >
+                        <th class="menu-keywords" >' .$info['kirjeldus']. '</th >
+                        <td class="price-discount" >' .soodus($info['hind'], 15).'€</td>
+
+                    </tr >
+                    </tr >';
+                    }
+                    ?>
 
                 </table>
             </div>
@@ -129,38 +156,47 @@ function soodus($hind, $soodusProtsent) {
                         <h2><div class="main-menu-title text-left">Joogid</div></h2>
                         <i class="fas fa-coffee"></i>
                     </header>
+                    <?php
+                    $joogid = array(
+                        array(
+                            'tuup' => "joogid",
+                            'nimetus' => 'Mahl',
+                            'kirjeldus' => 'õun, sidrun, ploom, tomat, virsik',
+                            'hind' => 0.50
+                        ),
+                        array(
+                            'tuup' => "joogid",
+                            'nimetus' => 'Kohv 300ml',
+                            'kirjeldus' => 'kanukohv, kohv piimaga, capuccino, caffe latte',
+                            'hind' => 1
+                        ),
+                        array(
+                            'tuup' => "joogid",
+                            'nimetus' => 'Piim',
+                            'kirjeldus' => '&nbsp',
+                            'hind' => 0.35
+                        ),
+                        array(
+                            'tuup' => "joogid",
+                            'nimetus' => 'Vesi',
+                            'kirjeldus' => 'sidruniga',
+                            'hind' => TASUTA
+                        ),
 
-                    <tr id="10">
-                        <th class="menu-name">Mahl</th>
-                        <td><span class="price">0,50€</span></td>
-                    <tr>
-                        <th class="menu-keywords">õun, sidrun, ploom, tomat, virsik</th>
-                    </tr>
-                    </tr>
+                    );
 
-                    <tr id="11">
-                        <th class="menu-name">Kohv 300ml</th>
-                        <td><span class="price">1,00€</span></td>
-                    <tr>
-                        <th class="menu-keywords">kanukohv, kohv piimaga, capuccino, caffe latte</th>
-                    </tr>
-                    </tr>
+                    foreach($joogid as $jook=>$info) {
+                        echo '<tr id = "1" >
+                        <th class="menu-name" >' .$info['nimetus']. '</th >
+                        <td ><span class="price" >' .$info['hind']. '€</span ></td >
+                    <tr >
+                        <th class="menu-keywords" >' .$info['kirjeldus']. '</th >
+                        <td class="price-discount" >' .soodus($info['hind'], 15).'€</td>
 
-                    <tr id="12">
-                        <th class="menu-name">Piim</th>
-                        <td><span class="price">0,35€</span></td>
-                    <tr>
-                        <th class="menu-keywords">&nbsp</th>
-                    </tr>
-                    </tr>
-
-                    <tr id="13">
-                        <th class="menu-name">Vesi</th>
-                        <td><span class="price">Tasuta</span></td>
-                    <tr>
-                        <th class="menu-keywords">sidrun</th>
-                    </tr>
-                    </tr>
+                    </tr >
+                    </tr >';
+                    }
+                    ?>
 
                 </table>
             </div>

@@ -22,5 +22,6 @@ function getData($sql, $conn){
     while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
         $data[] = $row;
     }
+    if(count($data) == 0) return false;
     return $data;
 }

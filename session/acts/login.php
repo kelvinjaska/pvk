@@ -16,8 +16,7 @@ $users = getData($sql, $ikt);
 if ($users !== false) {
     session_start();
     $_SESSION['user'] = $users[0];
-    header('Location: ../index.php');
+    header('Location: /index.php');
 } else {
-    echo 'aa';
-}
+    echo 'Error'
 // echo $users[0]['first_name']. ' '.$users[0]['last_name'];

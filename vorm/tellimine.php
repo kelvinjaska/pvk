@@ -9,7 +9,9 @@
 <h1>Tellimine</h1>
 <?php
 //lisab vormist saadud andmed muutujasse
-$toode1 = $_GET['t1'];
+$toode1 = $_GET['lahter1'];
+$toode2 = $_GET['lahter2'];
+$toode3 = $_GET['lahter3'];
 
 echo 'Toode 1: '.$toode1.'tk';
 ?>

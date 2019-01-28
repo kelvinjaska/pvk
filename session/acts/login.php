@@ -18,5 +18,6 @@ if ($users !== false) {
     $_SESSION['user'] = $users[0];
     header('Location: /index.php');
 } else {
-    echo 'Error'
+    echo 'Error';
+}
 // echo $users[0]['first_name']. ' '.$users[0]['last_name'];

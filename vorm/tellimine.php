@@ -13,5 +13,7 @@ $toode1 = $_GET['lahter1'];
 $toode2 = $_GET['lahter2'];
 $toode3 = $_GET['lahter3'];
 
-echo 'Toode 1: '.$toode1.'tk';
+echo 'Toode 1: '.$toode1.'tk', '<br>';
+echo 'Toode 2: '.$toode2.'tk', '<br>';
+echo 'Toode 3: '.$toode3.'tk';
 ?>
